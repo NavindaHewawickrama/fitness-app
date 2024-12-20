@@ -26,6 +26,7 @@ class HomePage extends StatelessWidget {
                 filled: true,
                 fillColor: Colors.white,
                 contentPadding: EdgeInsets.all(15),
+                prefixIcon: SvgPicture.asset('assets/icons/loupe.svg'),
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(15),
                   borderSide: BorderSide.none,
