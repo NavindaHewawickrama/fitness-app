@@ -8,42 +8,88 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: appBar(),
+      backgroundColor: Colors.white,
       body: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Container(
-            margin: EdgeInsets.only(top: 40, left: 20, right: 20),
-            decoration: BoxDecoration(
-              boxShadow: [
-                BoxShadow(
-                  color: Colors.grey.withOpacity(0.11),
-                  spreadRadius: 0.0,
-                  blurRadius: 40,
-                ),
-              ]
-            ),
-            child: TextField(
-              decoration: InputDecoration(
-                filled: true,
-                fillColor: Colors.white,
-                contentPadding: EdgeInsets.all(15),
-                prefixIcon: Padding(
-                  padding: const EdgeInsets.all(12),
-                  child:SvgPicture.asset('assets/icons/loupe.svg'),
-                ),
-                suffixIcon: Padding(
-                  padding: const EdgeInsets.all(12),
-                  child:SvgPicture.asset('assets/icons/setting.svg'),
-                ),
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(15),
-                  borderSide: BorderSide.none,
-                ),
+          _searchField(),
+          SizedBox(height: 40,),
+          Column(
+            children: [
+              Padding(
+                padding: const EdgeInsets.only(left: 20),
+                child: Text(
+                  'Category',
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontSize: 15,
+                    fontWeight: FontWeight.w600
+                  ),
+                )
               ),
-            ),
+
+            ],
           )
         ],
       ),
     );
+  }
+
+  Container _searchField() {
+    return Container(
+          margin: EdgeInsets.only(top: 40, left: 20, right: 20),
+          decoration: BoxDecoration(
+            boxShadow: [
+              BoxShadow(
+                color: Colors.grey.withOpacity(0.11),
+                spreadRadius: 0.0,
+                blurRadius: 40,
+              ),
+            ]
+          ),
+          child: TextField(
+            decoration: InputDecoration(
+              filled: true,
+              fillColor: Colors.white,
+              contentPadding: EdgeInsets.all(15),
+              hintText: "Search Pancake",
+              hintStyle: TextStyle(
+                color: Color(0xff000404),
+                fontSize: 14,   
+              ),
+              prefixIcon: Padding(
+                padding: const EdgeInsets.all(12),
+                child:SvgPicture.asset('assets/icons/loupe.svg', width: 20, height: 20,),
+              ),
+              suffixIcon: Container(
+                width: 100,
+                child: IntrinsicHeight(
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      children: [
+                        VerticalDivider(
+                          color: Colors.black,
+                          indent: 10,
+                          endIndent: 10,
+                          thickness: 0.1,
+                        )
+                        ,
+                        Padding(
+                        padding: const EdgeInsets.all(12),
+                        child:SvgPicture.asset('assets/icons/setting.svg', width: 20, height: 20,),
+                        ),
+                      ],
+                    ),
+                ),
+              ),
+              
+              border: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(15),
+                borderSide: BorderSide.none,
+              ),
+            ),
+          ),
+        );
   }
 
   AppBar appBar() {
