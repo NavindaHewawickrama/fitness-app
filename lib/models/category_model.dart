@@ -17,7 +17,7 @@ class CategoryModel {
     categories.add(
       CategoryModel(
         name: 'Salad',
-        iconPath: 'assets/images/salad.png',
+        iconPath: 'assets/images/hamburger.png',
         boxColor: Color(0xccdaaafd)
       )
     );
@@ -25,7 +25,7 @@ class CategoryModel {
      categories.add(
       CategoryModel(
         name: 'Cake',
-        iconPath: 'assets/images/salad.png',
+        iconPath: 'assets/images/hamburger.png',
         boxColor: Color(0xccddeefd)
       )
     );
@@ -33,7 +33,7 @@ class CategoryModel {
      categories.add(
       CategoryModel(
         name: 'Pie',
-        iconPath: 'assets/images/salad.png',
+        iconPath: 'assets/images/hamburger.png',
         boxColor: Color(0xaabbA3fd)
       )
     );
@@ -41,7 +41,7 @@ class CategoryModel {
      categories.add(
       CategoryModel(
         name: 'Panckakes',
-        iconPath: 'assets/images/salad.png',
+        iconPath: 'assets/images/hamburger.png',
         boxColor: Color(0xaa45d3fd)
       )
     );
@@ -49,7 +49,7 @@ class CategoryModel {
      categories.add(
       CategoryModel(
         name: 'Buns',
-        iconPath: 'assets/images/salad.png',
+        iconPath: 'assets/images/hamburger.png',
         boxColor: Color(0xff32A0fd)
       )
     );
@@ -57,7 +57,7 @@ class CategoryModel {
      categories.add(
       CategoryModel(
         name: 'Pizza',
-        iconPath: 'assets/images/salad.png',
+        iconPath: 'assets/images/hamburger.png',
         boxColor: Color(0xff32A3fd)
       )
     );

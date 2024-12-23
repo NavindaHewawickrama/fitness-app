@@ -47,9 +47,9 @@ class _HomePageState extends State<HomePage> {
               ),
               SizedBox(height: 15,),
               Container(
-                height: 150,
+                height: 120,
 
-                color: Colors.green,
+                color: const Color.fromARGB(255, 255, 255, 255),
                 child: ListView.separated(
                   itemCount: categories.length,
                   scrollDirection: Axis.horizontal,
@@ -58,7 +58,25 @@ class _HomePageState extends State<HomePage> {
                     return Container(
                       width: 100,
                       decoration: BoxDecoration(
-                        color: categories[index].boxColor
+                        color: categories[index].boxColor.withOpacity(0.3),
+                        borderRadius: BorderRadius.circular(15),  
+                      ),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Container(
+                            width: 50,
+                            height: 50,
+                            decoration: BoxDecoration(
+                              color: Colors.white,
+                              shape: BoxShape.circle,
+                            ),
+                            child: Padding(
+                              padding: const EdgeInsets.all(0),
+                              child: SvgPicture.asset(categories[index].iconPath),
+                            ),
+                          )
+                        ],
                       ),
                     );
                   },
